@@ -18,7 +18,10 @@ class user(models.Model):
     password=models.CharField(max_length=200)
 
 class patient(models.Model):
-    unique_id=models.IntegerField()
+    unique_id=models.CharField(max_length=10,
+    blank=True,
+    editable=False,
+    unique=True,)
     full_name=models.CharField(max_length=200)
     doctor=models.CharField(max_length=200)
     booking_date=models.DateField()
@@ -26,7 +29,13 @@ class patient(models.Model):
     mob_num=models.IntegerField()
     address=models.CharField(max_length=200)
     symptoms=models.CharField(max_length=200)
-    prescription=models.CharField(max_length=200)
+
+class prescription(models.Model):
+    unique_id=models.IntegerField()
+    name=models.CharField(max_length=200)
+    age=models.IntegerField()
+    doctor=models.CharField(max_length=200)
+    medicine=models.CharField(max_length=200)
 
 class pharmacy(models.Model):
     user_name=models.CharField(max_length=200)
