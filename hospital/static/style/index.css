@@ -1,0 +1,100 @@
+body{
+    background: white;
+    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Signika Negative', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+@media screen and (min-width: 1000px) {
+    #heading{
+        position: absolute;
+        text-align: center;
+        top: 35% !important;
+        width: 100%;
+        color: rgb(65,105,225);
+    }
+  }
+#nav{
+    background-color: rgb(65,105,225) !important;
+}
+.d-block{
+    max-height: 900px;
+}
+#heading{
+    position: absolute;
+    text-align: center;
+    top: 25%;
+    width: 100%;
+    color: rgb(65,105,225);
+}
+.h-bt{
+    border-color: rgb(65,105,225);
+    color: rgb(65,105,225);
+}
+#h-txt{
+    font-size: 65px;
+}
+#pro-h{
+    color: rgb(65,105,225);
+    text-align: center;
+    width: 100%;
+    padding-top: 30px; 
+}
+#con-1{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    overflow: hidden;
+    color: white;
+    background-color: rgb(65,105,225) ;
+}
+#p-1{
+    text-align: center;
+    margin: auto;
+}
+#d1-h{
+    color: rgb(65,105,225);
+    text-align: center;
+    width: 100%;
+    padding-top: 30px;  
+}
+#sec-con{
+    background-color: rgb(65,105,225);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: white;
+}
+.b-booking{
+    color: white;
+    margin-top: 20px;
+    border-color: white;
+}
+#foot{
+    background-color: rgb(65,105,225);
+    height: 100px;
+    margin-top: 30px;
+    color: white;
+}
+#i_div{
+    padding-top: 20px;
+}
+#span-logo{
+    font-size: 30px;
+}
+.fab{
+    color: turquoise;
+}
+#d2-h{
+    color: rgb(65,105,225);
+    text-align: center;
+    width: 100%;
+    padding-top: 30px;   
+}
+#about-con{
+    background-color: rgb(65,105,225);
+    color: white;
+    text-align: center;
+}
+#row-about{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}

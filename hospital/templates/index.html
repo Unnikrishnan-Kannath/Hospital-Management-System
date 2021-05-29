@@ -1,12 +1,151 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://kit.fontawesome.com/c8bb737a64.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&family=Signika+Negative:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
     <title>Hospital</title>
+    <link rel="icon" href="{% static 'logo/new logo.png'%}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'style/index.css'%}" type="text/css">
 </head>
 <body>
-    <h1>Hospital</h1>
+<!--Nav bar bootstrap-->
+
+<div class="sticky-top">
+    <div class="container-flex">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-light" id="nav">
+            <img width="50px" src="{% static 'images/logo.png'%}" alt="images">
+            <a class="navbar-brand" href="#">Hospital</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                      <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Login</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="{% url 'blog' %}">sighnup</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Contact us</a>
+                      </li> 
+                    </ul>
+                </div>
+        </nav>
+    </div>
+</div>
+
+<!--carousel div-->
+
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+          <img src="{% static 'images/carousel1.jpg'%}" class="d-block w-100" alt="image1">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/carousel2.jpg'%}" class="d-block w-100" alt="image2">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/carausel3.jpg'%}" class="d-block w-100" alt="image3">
+      </div>
+    </div>
+    
+  </div>
+    
+ <!--heading-->
+ 
+ <div id="heading">
+    <h1 id="h-txt">Hospital</h1>
+    <h5 id="h-txt-1">Keeping you to a better life</h5>
+    <button class="btn h-bt">Login</button>
+    <button class="btn h-bt">Sighn up</button>
+ </div>
+
+ <!--porfile-->
+
+ <div id="pro-h">
+  <h1><u>Profile</u></h1>
+ </div>
+
+ <!--First sec div-->
+ 
+ <div id="con-1" class="container d-flex justify-content-center">
+    <div class="row">
+      <div id="p-1" class="col-sm-12 col-12 col-md-6 d-flex justify-content-center">
+        <p>Established in the year 1975 Royal Hospital continues its pursuit in serving the people of kunnamkulam and nearby areas. The hospital is led by its founder and Managing Director, Dr.Thomas Mathew (MBBS,MS), who is highly qualified and experienced Consultant Surgeon. Royal hospital is working to promote quality and up to date medical facilities for the people of surrounding areas of Kunnamkulam.</p>
+      </div>
+      <div class="col-sm-12 col-12 col-md-6 d-flex justify-content-center">
+        <img height="100%" width="100%" src="{% static 'images/hospital building.jpg'%}" alt="hospital">
+      </div>
+    </div>
+</div>
+
+<!--department div-->
+
+<div id="d1-h">
+  <h1><u>Departments</u></h1>
+</div>
+
+<div id="sec-con" class="container text-center">
+  <div class="row">
+    <div class="col-md-4">
+      <img height="250px" width="100%" src="{% static 'images/g-med.jpg'%}" alt="General medicin">
+      <h3>General medicin</h3>
+      <button class="btn b-booking">Book an appoinment</button>
+    </div>
+    <div class="col-md-4">
+      <img height="250px" width="100%" src="{% static 'images/dental.jpg'%}" alt="Dental">
+      <h3>Dental</h3>
+      <button class="btn b-booking">Book an appoinment</button>
+    </div>
+    <div class="col-md-4">
+      <img height="250px" width="100%" src="{% static 'images/Ophthalmology.jpg'%}" alt="Ophthalmology">
+      <h3>Ophthalmology</h3>
+      <button class="btn b-booking">Book an appoinment</button>
+    </div>
+  </div>
+</div>
+
+<!--About us-->
+
+<div id="d2-h">
+  <h1><u>About us</u></h1>
+</div>
+
+<div id="about-con" class="container">
+  <div id="row-about" class="row">
+    <div class="col-md-5">
+      <img width="100%" src="{% static 'images/about us.jpg'%}" alt="about us">
+    </div>
+    <div style="margin: auto;" class="col-md-7">
+      <p>
+        Covering all aspects of the hospital environment, Provides both clinical and senior administrative staff with instant access to a comprehensive reference source introducing technologies, services and procedures our audience can employ to improve the management of their facilities.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!--Footer-->
+
+<div id="foot" class="container-flex text-center">
+  <div id="i_div">
+    <span id="span-logo">
+      <a target="_blank" href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a>
+      <a target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram-square"></i></a>
+      <a target="_blank" href="https://twitter.com/LOGIN"><i class="fab fa-twitter-square"></i></a>
+      <a target="_blank"  href="https://www.youtube.com/"><i class="fab fa-youtube-square"></i><br></a>
+    </span>
+  </div>
+  <p>All rights recived</p>
+</div>
+
 </body>
-</html>
+</html> 
