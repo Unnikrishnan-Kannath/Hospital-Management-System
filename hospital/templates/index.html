@@ -29,7 +29,7 @@
                         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#">Login</a>
+                        <a class="nav-link" href="{% url 'login' %}">Login</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="{% url 'sighn' %}">sighn up</a>
@@ -65,7 +65,7 @@
  <div id="heading">
     <h1 id="h-txt">Hospital</h1>
     <h5 id="h-txt-1">Keeping you to a better life</h5>
-    <button onclick="" class="btn h-bt">Login</button>
+    <button onclick="location.href='{% url 'login' %}'" class="btn h-bt">Login</button>
     <button onclick="location.href='{% url 'sighn'%}'" class="btn h-bt">Sighn up</button>
  </div>
 

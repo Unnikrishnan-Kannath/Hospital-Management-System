@@ -8,9 +8,14 @@ def home(request):
 #sighn-up page render
 
 def sighn(request):
-    return render(request,'sighnup.html')
+    return render(request,'registration/sighnup.html')
 
 #contact page render
 
 def contact(request):
     return render(request,'contactus.html')
+
+#login page render
+
+def login(request):
+    return render(request,'registration/login.html')

@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-    <title>Contact-us</title>
+    <title>Sighn-up</title>
     <link rel="icon" href="{% static 'logo/new logo.png'%}" type="image/x-icon">
-    <link rel="stylesheet" href="{% static 'style/contact-us.css'%}" type="text/css">
+    <link rel="stylesheet" href="{% static 'style/sighn-up.css'%}" type="text/css">
 </head>
 <body>
     
@@ -44,36 +44,82 @@
         </div>
     </div>
 
-<!--background image-->
+<!--background div-->
 
-<div style="background-image: url('{% static 'images/contact us.jpg'%}');" id="div-first" class="container-fluid d-flex justify-content-center">
-  <h1 id="h1-con">Contact-us</h1><br> 
+<div style="background-image: url('{% static 'images/sighn-up.jpg'%}');" id="sighnup-head" class="container-fluid d-flex justify-content-center">
+  <h1 id="sighn-h1">Sighn-up</h1>
 </div>
 
-<!--contact div-->
+<!--Sighn-up-->
 
 <div class="container">
-  <div class="row">
-    <div class="col-md-4 col-con">
-      <span class="logo-con">
-        <i class="fas fa-search-location"></i>
-      </span>
-      <p><u>Address</u><br>
-        DR TM HEALTHCARE CENTRE PVT LTD<br>
-        Guruvayur Road, Kunnamkulam, pin-680503, Thrissur, Kerala, INDIA</p>
+  <h3 id="con-h">sighn-up-here</h3>
+  <form action="">
+    <!--row one-->
+    <div id="row-con" class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="First-name" aria-describedby="fnameid">
+          <small id="fnameid" class="form-text">Enter your first-name here</small>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="last-name" aria-describedby="lsnameid">
+          <small id="lsnameid" class="form-text">Enter your last-name here</small>
+        </div>
+      </div>
     </div>
-    <div class="col-md-4 col-con">
-      <span class="logo-con"><i class="far fa-envelope"></i></span>
-      <p><u>Email</u><br>
-      hospitalkkm@gmail.com</p>
+    <!--row two-->
+    <div class="row">
+      <div class="col-md-8">
+        <div class="form-group">
+          <input type="number" class="form-control" placeholder="Phone number" aria-describedby="phoneid">
+          <small id="phoneid" class="form-text">Enter your mobile number</small>
+        </div>  
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <input type="number" class="form-control" placeholder="age" aria-describedby="ageid">
+          <small id="ageid" class="form-text">Enter your age</small>
+        </div>  
+      </div>
     </div>
-    <div class="col-md-4 col-con">
-      <span class="logo-con"><i class="fas fa-phone-square"></i></span>
-      <p><u>Phone-number</u><br>
-      0487-965865<br>
-      +91-3647894523</p>
+    <!--row three-->
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <input type="email" class="form-control" placeholder="email" aria-describedby="emailid">
+          <small id="emailid" class="form-text">Enter your email address</small>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="address" aria-describedby="addressid">
+          <small id="addressid" class="form-text">Enter your address</small>
+        </div>
+      </div>
     </div>
-  </div>
+    <!--row four-->
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <input type="password" class="form-control" placeholder="password" aria-describedby="passid">
+          <small id="passid" class="form-text">Enter your password</small>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <input type="password" class="form-control" placeholder="confirm password" aria-describedby="conid">
+          <small id="conid" class="form-text">Re-enter your password</small>
+        </div>
+      </div>
+    </div>
+    <div id="div-btn">
+      <button id="sub-btn" class="btn btn-light">Submit</button><br>
+      <a id="log-link" href="{% url 'login' %}">already have an account??? | Login-here</a>
+    </div>
+  </form>
 </div>
 
 <!--Footer-->
@@ -89,6 +135,5 @@
   </div>
   <p>All rights recived</p>
 </div>
-
 </body>
 </html>

@@ -8,3 +8,54 @@ body{
 #nav{
     background-color: rgb(65,105,225) !important;
 }
+#sighnup-head{
+    height: 500px !important;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    color: rgb(65,105,225);
+    text-align: center;
+}
+#sighn-h1{
+    margin: auto;
+}
+.container{
+    background-color: rgb(65,105,225);
+    color: white;
+    margin-top: 30px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+#con-h{
+    text-align: center;
+    padding-bottom: 40px;
+}
+#row-con{
+    margin-top: 10px;
+}
+#sub-btn{
+    color: rgb(65,105,225);
+    margin-bottom: 10px;
+}
+#div-btn{
+    width: 100%;
+    text-align: center;
+}
+#foot{
+    background-color: rgb(65,105,225);
+    height: 100px;
+    margin-top: 30px;
+    color: white;
+}
+#i_div{
+    padding-top: 20px;
+}
+#span-logo{
+    font-size: 30px;
+}
+.fab{
+    color: turquoise;
+}
+#log-link{
+    color: white;
+}
