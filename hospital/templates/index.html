@@ -32,10 +32,10 @@
                         <a class="nav-link" href="#">Login</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="{% url 'blog' %}">sighnup</a>
+                        <a class="nav-link" href="{% url 'sighn' %}">sighn up</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#">Contact us</a>
+                        <a class="nav-link" href="{% url 'contact' %}">Contact us</a>
                       </li> 
                     </ul>
                 </div>
@@ -65,8 +65,8 @@
  <div id="heading">
     <h1 id="h-txt">Hospital</h1>
     <h5 id="h-txt-1">Keeping you to a better life</h5>
-    <button class="btn h-bt">Login</button>
-    <button class="btn h-bt">Sighn up</button>
+    <button onclick="" class="btn h-bt">Login</button>
+    <button onclick="location.href='{% url 'sighn'%}'" class="btn h-bt">Sighn up</button>
  </div>
 
  <!--porfile-->
