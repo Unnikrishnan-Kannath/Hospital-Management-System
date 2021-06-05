@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="{% static 'style/sighn-up.css'%}" type="text/css">
 </head>
 <body>
-    
+  
 <!--nav bar-->
 
     <div class="sticky-top">
@@ -54,49 +54,31 @@
 
 <div class="container">
   <h3 id="con-h">sighn-up-here</h3>
-  <form action="">
+  <form action="\accounts\signup\" method="POST">
+    {% csrf_token %}
     <!--row one-->
     <div id="row-con" class="row">
       <div class="col-md-6">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="First-name" aria-describedby="fnameid">
+          <input type="text" class="form-control" placeholder="First-name" aria-describedby="fnameid" name="first_name" required>
           <small id="fnameid" class="form-text">Enter your first-name here</small>
         </div>
       </div>
       <div class="col-md-6">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="last-name" aria-describedby="lsnameid">
-          <small id="lsnameid" class="form-text">Enter your last-name here</small>
+          <input type="text" class="form-control" placeholder="user-name" aria-describedby="lsnameid" name="username" required>
+          <small id="lsnameid" class="form-text">Enter your username here</small>
         </div>
       </div>
     </div>
     <!--row two-->
-    <div class="row">
-      <div class="col-md-8">
-        <div class="form-group">
-          <input type="number" class="form-control" placeholder="Phone number" aria-describedby="phoneid">
-          <small id="phoneid" class="form-text">Enter your mobile number</small>
-        </div>  
-      </div>
-      <div class="col-md-4">
-        <div class="form-group">
-          <input type="number" class="form-control" placeholder="age" aria-describedby="ageid">
-          <small id="ageid" class="form-text">Enter your age</small>
-        </div>  
-      </div>
-    </div>
+    
     <!--row three-->
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-12">
         <div class="form-group">
-          <input type="email" class="form-control" placeholder="email" aria-describedby="emailid">
+          <input type="email" class="form-control" placeholder="email" aria-describedby="emailid" name="email" required>
           <small id="emailid" class="form-text">Enter your email address</small>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="address" aria-describedby="addressid">
-          <small id="addressid" class="form-text">Enter your address</small>
         </div>
       </div>
     </div>
@@ -104,13 +86,13 @@
     <div class="row">
       <div class="col-md-6">
         <div class="form-group">
-          <input type="password" class="form-control" placeholder="password" aria-describedby="passid">
+          <input type="password" class="form-control" placeholder="password" aria-describedby="passid" name="psw" required>
           <small id="passid" class="form-text">Enter your password</small>
         </div>
       </div>
       <div class="col-md-6">
         <div class="form-group">
-          <input type="password" class="form-control" placeholder="confirm password" aria-describedby="conid">
+          <input type="password" class="form-control" placeholder="confirm password" aria-describedby="conid" name="psw-repeat" required>
           <small id="conid" class="form-text">Re-enter your password</small>
         </div>
       </div>
@@ -135,5 +117,6 @@
   </div>
   <p>All rights recived</p>
 </div>
+ 
 </body>
 </html>
