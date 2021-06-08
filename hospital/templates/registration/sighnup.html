@@ -86,14 +86,14 @@
     <div class="row">
       <div class="col-md-6">
         <div class="form-group">
-          <input type="password" class="form-control" placeholder="password" aria-describedby="passid" name="psw" required>
+          <input id="passwd1" type="password" class="form-control" placeholder="password" aria-describedby="passid" name="psw" required>
           <small id="passid" class="form-text">Enter your password</small>
         </div>
       </div>
       <div class="col-md-6">
         <div class="form-group">
-          <input type="password" class="form-control" placeholder="confirm password" aria-describedby="conid" name="psw-repeat" required>
-          <small id="conid" class="form-text">Re-enter your password</small>
+          <input id="passwd2" type="password" class="form-control" placeholder="confirm password" aria-describedby="conid" name="psw-repeat" required>
+          <small onchange="func()" id="conid" class="form-text">Re-enter your password</small>
         </div>
       </div>
     </div>
@@ -117,6 +117,25 @@
   </div>
   <p>All rights recived</p>
 </div>
- 
+
+<script>
+    $(document).ready(function(){
+            $("#passwd2").blur(function(){
+              func();
+            });
+        });
+  function func(){
+    const pass1=document.getElementById("passwd1").value;
+    const pass2=document.getElementById("passwd2").value;
+    if (pass1 != pass2){
+      alert("password and confirm password should be same");
+    }
+    else{
+      if (pass1.length <= 5){
+        alert("password should have minimum 6 elements")
+      }
+    }
+  }
+</script>
 </body>
 </html>
