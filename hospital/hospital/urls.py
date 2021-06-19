@@ -21,4 +21,5 @@ urlpatterns = [
     path('accounts/',include('django.contrib.auth.urls')),
     path('',include('app_hospital.urls')),
     
+    
 ]

@@ -8,5 +8,6 @@ urlpatterns = [
     path('contact',views.contact,name='contact'),
     path('accounts/login',views.login,name='login'),
     path('accounts/signup/',views.signup_req, name='signup'),
+    path('accounts/user_login',views.ip_data),
     
 ]
