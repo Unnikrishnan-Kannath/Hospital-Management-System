@@ -1,5 +1,6 @@
 #from hospital.app_hospital.models import user
 from django.http import request
+from django.db import models
 from django.shortcuts import render,redirect
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.models import User, auth
@@ -42,7 +43,7 @@ def ip_data(request):
 	user_email=request.POST.get('user_email')
 	user_password=request.POST.get('user_password')
 	user=authenticate(request,email=user_email, password=user_password)
-	print(user)
+	print(type(user))
 	if user is not None:
 		login(request, user)
 		return render(request,"userlogin.html")
