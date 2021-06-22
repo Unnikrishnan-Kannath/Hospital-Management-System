@@ -64,54 +64,6 @@
                         <input type="password" class="form-control" placeholder="password" aria-describedby="pass-1-id">
                         <small id="pass-1-id">Enter your password</small>
                     </div>
-                    <div class="d-flex justify-content-center form-div"">
-                        <button class="btn btn-light">log-in</button>
-                    </div>
-                </form>
-            </div>
-            
-        </div>
-    </div>
-    <div class="col-md-4 ">
-        <h1 class="h1-col"><u>Pharmacy login</u></h1>
-        <div class="div-bag">
-            <div class="d-flex justify-content-center">
-                <img width="20%" src="{% static 'images/profilr.png'%}" alt="">
-            </div>
-            <div class="d-flex justify-content-center form-div">
-                <form action="">
-                    <div class="form-group">
-                        <input type="email" class="form-control" placeholder="email" aria-describedby="email-1-id">
-                        <small id="email-1-id">Enter your registred email address</small>
-                    </div>
-                    <div class="form-group">
-                        <input type="password" class="form-control" placeholder="password" aria-describedby="pass-1-id">
-                        <small id="pass-1-id">Enter your password</small>
-                    </div>
-                    <div class="d-flex justify-content-center form-div"">
-                        <button class="btn btn-light">log-in</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <h1 class="h1-col"><u>User log-in</u></h1>
-        <div class="div-bag">
-            <div class="d-flex justify-content-center">
-                <img width="20%" src="{% static 'images/profilr.png'%}" alt="">
-            </div>
-            <div class="d-flex justify-content-center form-div">
-                <form action="user_login" method="POST">
-                        {% csrf_token %}
-                    <div class="form-group">
-                        <input type="email" class="form-control" placeholder="email" aria-describedby="email-1-id" name="user_email">
-                        <small id="email-1-id">Enter your registred email address</small>
-                    </div>
-                    <div class="form-group">
-                        <input type="password" class="form-control" placeholder="password" aria-describedby="pass-1-id" name="user_password">
-                        <small id="pass-1-id">Enter your password</small>
-                    </div>
                     <div class="d-flex justify-content-center form-div">
                         <button class="btn btn-light">log-in</button>
                     </div>
