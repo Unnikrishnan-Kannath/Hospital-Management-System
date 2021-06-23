@@ -40,12 +40,21 @@ def signup_req(request):
 		return render(request,'registration/signup.html')
 
 def ip_data(request):
-	user_email=request.POST.get('user_email')
-	user_password=request.POST.get('user_password')
-	user=authenticate(request,email=user_email, password=user_password)
-	print(type(user))
-	if user is not None:
-		login(request, user)
-		return render(request,"userlogin.html")
-	else:
-		return redirect('login')
+	if request.method=="POST":
+		un=request.POST["user_email"]
+		ps=request.POST["user_password"]
+		
+		user=authenticate(username=un,password=ps)
+		if user:
+			login(request,user)
+			if user.is_superuser:
+				print("success")
+				return redirect("/admin")
+			'''if user.is_staff:
+				return redirect("employee")'''
+			
+
+
+		else:
+			#return render(request,'user_login.html',{"status":"Invalid User Name or Password"})
+			print("error")
