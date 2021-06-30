@@ -4,7 +4,7 @@ from django.contrib import admin
 from .models import doctor
 from .models import prescription
 from .models import patient
-from .models import pharmacy
+from .models import pharmacy,register_table
 
 # Register your models here.
 class doctorAdmin(admin.ModelAdmin):
@@ -22,3 +22,5 @@ admin.site.register(patient,patientAdmin)
 class pharmacyAdmin(admin.ModelAdmin):
     search_fields=('user_name',)
 admin.site.register(pharmacy,pharmacyAdmin)
+
+admin.site.register(register_table)

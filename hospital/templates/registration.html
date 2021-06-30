@@ -33,7 +33,7 @@
                             <a class="nav-link" href="{% url 'login' %}">Login</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="{% url 'sighn' %}">sighn up</a>
+                            <a class="nav-link" href="{% url 'reg' %}">sighn up</a>
                           </li>
                           <li class="nav-item">
                             <a class="nav-link" href="{% url 'contact' %}">Contact us</a>
@@ -54,7 +54,7 @@
 
 <div class="container">
   <h3 id="con-h">sighn-up-here</h3>
-  <form action="\accounts\signup\" method="POST">
+  <form action="" method="POST">
     {% csrf_token %}
     <!--row one-->
     <div id="row-con" class="row">
@@ -66,19 +66,34 @@
       </div>
       <div class="col-md-6">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="user-name" aria-describedby="lsnameid" name="username" required>
-          <small id="lsnameid" class="form-text">Enter your username here</small>
+          <input type="text" class="form-control" placeholder="Last-name" aria-describedby="lsnameid" name="lastname" required>
+          <small id="lsnameid" class="form-text">Enter your last name here</small>
         </div>
       </div>
-    </div>
     <!--row two-->
-    
+    <div class="col-md-12">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="username" aria-describedby="unameid" name="username" required>
+        <small id="lsnameid" class="form-text">Enter your username here</small>
+      </div>
+    </div>
+  </div>
     <!--row three-->
     <div class="row">
       <div class="col-md-12">
         <div class="form-group">
           <input type="email" class="form-control" placeholder="email" aria-describedby="emailid" name="email" required>
           <small id="emailid" class="form-text">Enter your email address</small>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <input type="phn" class="form-control" placeholder="phone number" aria-describedby="phnid" name="phn" required>
+          <small id="phnid" class="form-text">Enter your phone number</small>
         </div>
       </div>
     </div>
@@ -97,6 +112,20 @@
         </div>
       </div>
     </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <label for="">User Type</label>
+                        <select name="utype" class="form-control">
+                          <option value="cust">I am Customer</option>
+                          <option value="employee">I am Employee</option>
+                        </select>
+        </div>
+      </div>
+    </div>
+
+
     <div id="div-btn">
       <button id="sub-btn" class="btn btn-light">Submit</button><br>
       <a id="log-link" href="{% url 'login' %}">already have an account??? | Login-here</a>
