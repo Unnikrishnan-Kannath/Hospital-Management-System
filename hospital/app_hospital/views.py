@@ -15,6 +15,11 @@ def home(request):
 def sighn(request):
     return render(request,'registration/sighnup.html')
 
+#user loged page
+
+def loguser(request):
+	return render(request, 'customer-log.html')
+
 #contact page render
 
 def contact(request):
@@ -56,7 +61,7 @@ def user_login(request):
 			if user.is_staff:
 				return redirect("contact")
 			if user.is_active:
-				return redirect("home")
+				return redirect("customerlogin")
 
 
 		else:
