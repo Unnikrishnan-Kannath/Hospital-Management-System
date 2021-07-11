@@ -49,36 +49,37 @@
         </div>
     </div>
     <div class="container" id="sec-con">
-      <form action="">
+      <form action="patient" method="POST">
+        {% csrf_token %}
         <div class="row" id="fst-row">
             <div class="col-md-6">
-                <input type="text" class="form-control" id="name-ip" placeholder="patient name" required>
+                <input type="text" class="form-control" id="name-ip" placeholder="patient name" required name="full_name">
             </div>
             <div class="col-md-6">
-              <select type="text" class="form-control" id="doctor-ip" placeholder="doctor" required>
+              <select type="text" class="form-control" id="doctor-ip" placeholder="doctor" required name="doctor">
                 <option>doctor_1</option>
               </select>
             </div>
         </div>
         <div class="row">
           <div class="col-md-3">
-            <input type="number" class="form-control" id="age-ip" placeholder="age" required>
+            <input type="number" class="form-control" id="age-ip" placeholder="age" required name="age">
           </div>
           <div class="col-md-5">
-            <input type="number" class="form-control" id="phone-ip" placeholder="phone-number" required>
+            <input type="number" class="form-control" id="phone-ip" placeholder="phone-number" required name="mob_num">
           </div>
           <div class="col-md-4">
-            <input type="date" class="form-control" id="date-ip" required>
+            <input type="date" class="form-control" id="date-ip" required name="booking_date">
           </div>
         </div>
         <div class="row">
           <div class="col-md-12">
-            <input type="text" class="form-control" id="address-ip" placeholder="address" required>
+            <input type="text" class="form-control" id="address-ip" placeholder="address" required name="address">
           </div>
         </div>
         <div class="row">
           <div class="col-md-12">
-            <input type="text" class="form-control" id="address-ip" placeholder="symptoms" required>
+            <input type="text" class="form-control" id="address-ip" placeholder="symptoms" required name="symptoms">
           </div>
         </div>
         <div class="row">

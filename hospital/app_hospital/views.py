@@ -4,7 +4,11 @@ from django.db import models
 from django.shortcuts import render,redirect
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.models import User, auth
-from .models import pharmacy,register_table,doctor
+from .models import pharmacy,register_table,doctor,Patient
+import random
+
+def create_new_ref_number():
+	return str(random.randint(1000,9999))
 
 # Create your views here.
 def home(request):
@@ -59,11 +63,27 @@ def user_login(request):
 			if user.is_superuser: 
 				return redirect("/admin")
 			if user.is_staff:
-				return redirect("contact")
+				return render(request,"doctorlogin.html")
 			if user.is_active:
 				return redirect("customerlogin")
 
 
 		else:
 			return render(request,'user_login.html',{"status":"Invalid User Name or Password"})
+
+def patient(request):
+	if request.method=="POST":
+		uid=create_new_ref_number()
+		print(uid)
+		name=request.POST["full_name"]
+		doctor=request.POST["doctor"]
+		booking_date=request.POST["booking_date"]
+		age=request.POST["age"]
+		mob_number=request.POST["mob_num"]
+		address=request.POST["address"]
+		symptoms=request.POST["symptoms"]
+		pt=Patient(uid=uid,full_name=name,doctor=doctor,booking_date=booking_date,age=age,mob_num=mob_number,address=address,symptoms=symptoms)
+		pt.save()
+		return render(request,"success.html")
+	return redirect("customerlogin")
 

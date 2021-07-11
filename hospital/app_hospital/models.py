@@ -23,8 +23,8 @@ class user(models.Model):
     address=models.CharField(max_length=200)
     password=models.CharField(max_length=200)
 
-class patient(models.Model):
-    unique_id=models.CharField(max_length=10,
+class Patient(models.Model):
+    uid=models.CharField(max_length=10,
     blank=True,
     editable=False,
     unique=True,)
@@ -39,7 +39,7 @@ class patient(models.Model):
 	    return self.full_name
 
 class prescription(models.Model):
-    unique_id=models.IntegerField()
+    uid=models.IntegerField()
     name=models.CharField(max_length=200)
     age=models.IntegerField()
     doctor=models.CharField(max_length=200)
