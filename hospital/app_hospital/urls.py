@@ -11,4 +11,5 @@ urlpatterns = [
     path('signup/login',views.user_login),
     path('accounts/login/user_login',views.loguser,name='customerlogin'),
     path('accounts/login/patient',views.patient,name="patient"),
+    path('doctor_data',views.doctor_data,name="doctor_data"),
 ]

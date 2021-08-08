@@ -6,6 +6,7 @@ from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.models import User, auth
 from .models import pharmacy,register_table,doctor,Patient
 import random
+import datetime
 
 def create_new_ref_number():
 	return str(random.randint(1000,9999))
@@ -87,3 +88,8 @@ def patient(request):
 		return render(request,"success.html")
 	return redirect("customerlogin")
 
+def doctor_data(request):
+	data=datetime.datetime.now()
+	pat=Patient.objects.filter(booking_date=data)
+	if pat==True:
+		print(pat)
