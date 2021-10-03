@@ -1,0 +1,29 @@
+body{
+    background: white;
+    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Signika Negative', sans-serif;
+    margin: 0;
+    padding: 0;
+    
+}
+#nav{
+    background-color: rgb(65,105,225) !important;
+}
+#foot{
+    background-color: rgb(65,105,225);
+    height: 100px;
+    margin-top: 30px;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+#i_div{
+    padding-top: 20px;
+}
+#span-logo{
+    font-size: 30px;
+}
+.fab{
+    color: turquoise;
+}
